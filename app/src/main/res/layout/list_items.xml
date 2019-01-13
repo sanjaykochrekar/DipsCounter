@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_background">
+
+    <TextView
+        android:id="@+id/show_number_of_dips_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/_123"
+        android:textColor="#000000"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/show_current_date_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="4dp"
+        android:text="@string/_12_12_2019"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

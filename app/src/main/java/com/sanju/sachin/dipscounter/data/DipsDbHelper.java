@@ -24,7 +24,8 @@ public class DipsDbHelper extends SQLiteOpenHelper {
 
         String SQL_CREATE_ENTRIES = "CREATE TABLE " + DipsEntry.TABLE_NAME + "("
                 + DipsEntry._ID + " INTEGER PRIMARY KEY, "
-                + DipsEntry.COLUMN_DIPS_COUNT + " INTEGER);";
+                + DipsEntry.COLUMN_DATE + " TEXT,"
+                + DipsEntry.COLUMN_DIPS_COUNT + " INTEGER)";
         sqLiteDatabase.execSQL(SQL_CREATE_ENTRIES);
     }
 
