@@ -67,6 +67,7 @@ public class DipsCounterActivity extends AppCompatActivity {
     private void insertDips() {
 
         String d = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
+        String t = new SimpleDateFormat("hh/mm").format(new Date());
 
         //create database helper
         DipsDbHelper mDbHelper = new DipsDbHelper(this);
@@ -79,6 +80,7 @@ public class DipsCounterActivity extends AppCompatActivity {
         ContentValues values = new ContentValues();
         values.put(DipsEntry.COLUMN_DIPS_COUNT, dipsCount);
         values.put(DipsEntry.COLUMN_DATE, d);
+        values.put(DipsEntry.COLUMN_TIME, t);
 
         // Insert a new row for pet in the database, returning the ID of that new row.
         long newRowId = sqLiteDatabase.insert(DipsEntry.TABLE_NAME, null, values);

@@ -54,7 +54,8 @@ public class HistoryActivity extends AppCompatActivity {
 
                 DipsEntry._ID,
                 DipsEntry.COLUMN_DIPS_COUNT,
-                DipsEntry.COLUMN_DATE
+                DipsEntry.COLUMN_DATE,
+                DipsEntry.COLUMN_TIME
 
         };
 
@@ -73,7 +74,7 @@ public class HistoryActivity extends AppCompatActivity {
             //Todo int idColumnIndex = cursor.getColumnIndex(DipsEntry._ID);
             int numberOfDipsColumnIndex = cursor.getColumnIndex(DipsEntry.COLUMN_DIPS_COUNT);
             int dateColumnIndex = cursor.getColumnIndex(DipsEntry.COLUMN_DATE);
-
+            int timeColumnIndex = cursor.getColumnIndex(DipsEntry.COLUMN_TIME);
             // Iterate through all the returned rows in the cursor
             while (cursor.moveToNext()) {
                 // Use that index to extract the String or Int value of the word
@@ -81,9 +82,10 @@ public class HistoryActivity extends AppCompatActivity {
                 //todo int currentID = cursor.getInt(idColumnIndex);
                 String currentCount = cursor.getString(numberOfDipsColumnIndex);
                 String currentDate = cursor.getString(dateColumnIndex);
+                String currentTime = cursor.getString(timeColumnIndex);
 
                 //add values in ArrayList
-                detail.add(new details(currentCount, currentDate));
+                detail.add(new details(currentCount, currentDate, currentTime));
             }
 
             detailsAdapter adapter = new detailsAdapter(this, detail);

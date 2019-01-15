@@ -28,12 +28,14 @@ public class detailsAdapter extends ArrayAdapter<details> {
         details currentName = getItem(position);
 
         //Find the TextView in the list_item.xml layout with the ID
-        TextView oneTextView = listItemView.findViewById(R.id.show_number_of_dips_list_view);
-        TextView twoTextView = listItemView.findViewById(R.id.show_current_date_list_view);
+        TextView countTextView = listItemView.findViewById(R.id.show_number_of_dips_list_view);
+        TextView dateTextView = listItemView.findViewById(R.id.show_current_date_list_view);
+        TextView timeTextView = listItemView.findViewById(R.id.show_current_time_list_view);
         //Get First input  from the current
         assert currentName != null;
-        oneTextView.setText(currentName.getNumberOfDips());
-        twoTextView.setText(currentName.getDate());
+        countTextView.setText(currentName.getNumberOfDips());
+        dateTextView.setText(currentName.getDate());
+        timeTextView.setText(currentName.getTime());
         return listItemView;
     }
 }

@@ -4,13 +4,14 @@ public class details {
 
     //mNumber_of_dips get total dips
     private String mNumberOfDips;
-
     private String mDate;
+    private String mTime;
 
     //constractor
-    public details(String NumberOfDips, String CurrentDate) {
+    public details(String NumberOfDips, String CurrentDate, String CurrentTime) {
         mNumberOfDips = NumberOfDips;
         mDate = CurrentDate;
+        mTime = CurrentTime;
     }
 
     public String getNumberOfDips() {
@@ -20,4 +21,10 @@ public class details {
     public String getDate() {
         return mDate;
     }
+
+    public String getTime() {
+        return mTime;
+    }
+
+
 }
