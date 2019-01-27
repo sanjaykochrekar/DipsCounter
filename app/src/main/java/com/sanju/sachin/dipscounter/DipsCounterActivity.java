@@ -88,7 +88,7 @@ public class DipsCounterActivity extends AppCompatActivity {
         // Show a toast message depending on whether or not the insertion was successful
         if (newRowId == -1) {
             // If the row ID is -1, then there was an error with insertion.
-            Toast.makeText(this, "Error with saving pet", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error with saving data", Toast.LENGTH_SHORT).show();
         } else {
             // Otherwise, the insertion was successful and we can display a toast with the row ID.
             Toast.makeText(this, "Dips saved with row id: " + newRowId + "  " + d, Toast.LENGTH_SHORT).show();
